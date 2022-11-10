@@ -4,8 +4,6 @@ import iconBtn from "../src/assets/favico/apple-touch-icon.png";
 import { useState, useEffect } from "react";
 import { Movies } from "./components/Movie";
 
-interface movieProps {}
-
 export function App() {
   const [count, setCount] = useState(-1);
   return (
@@ -13,7 +11,7 @@ export function App() {
       <Header />
       <Movies count={count} />
       <button
-        className="bg-gray-50 flex justify-center items-center p-2 mt-3 rounded hover:bg-gray-300 transition-colors"
+        className="bg-gray-50 flex justify-center items-center p-2 lg:mt-3 rounded hover:bg-gray-300 transition-colors"
         onClick={() =>
           setCount((count) => {
             if (count < 19) {

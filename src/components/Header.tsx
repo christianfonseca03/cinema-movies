@@ -3,8 +3,8 @@ import icon from "../assets/favico/android-chrome-512x512.png";
 export function Header() {
   return (
     <>
-      <img src={icon} alt="icon" className="h-16 w-16 mt-16 mb-6 " />
-      <h1 className="text-white font-bold text-4xl">
+      <img src={icon} alt="icon" className="lg:h-16 lg:w-16 h-8 w-8 lg:mt-16 lg:mb-6 mt-3 mb-3" />
+      <h1 className="text-white font-bold lg:text-4xl text-2xl">
         Não sabe o que assistir?
       </h1>
     </>

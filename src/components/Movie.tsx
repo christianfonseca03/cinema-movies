@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 interface Movie {
   original_title: string;
   id: number;
-  overview: string; //sinopse
+  overview: string; 
   poster_path: string;
 }
 
@@ -31,16 +31,16 @@ export function Movies({ count }: MovieProps) {
   }
 
   return (
-    <div className="flex m-12 flex-col sm:flex-row">
+    <div className="flex lg:m-12 m-6 flex-col lg:flex-row lg:items-start items-center">
       <img
         src={`${imagePath}${movies[count].poster_path}`}
         alt="poster"
-        className="h-80"
+        className="lg:h-80 lg:w-auto h-40 w-40"
       />
-      <div className="flex flex-col items-center ml-6">
+      <div className="flex flex-col items-center text-center lg:ml-3">
         <h1
           key={movies[count].id}
-          className="text-white text-3xl mb-3 font-semibold"
+          className="text-white text-3xl mb-3 mt-3 font-semibold"
         >
           {movies[count].original_title}
         </h1>
