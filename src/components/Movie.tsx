@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 interface Movie {
-  original_title: string;
+  title: string;
   id: number;
   overview: string; 
   poster_path: string;
@@ -17,7 +17,7 @@ export function Movies({ count }: MovieProps) {
   useEffect(() => {
     try {
       fetch(
-        `https://api.themoviedb.org/3/movie/popular?api_key=ea08cd1d8878a63dbebf3adc9da30a74`
+        `https://api.themoviedb.org/3/movie/popular?api_key=ea08cd1d8878a63dbebf3adc9da30a74&language=en`
       )
         .then((response) => response.json())
         .then((data) => setMovies(data.results));
@@ -31,7 +31,7 @@ export function Movies({ count }: MovieProps) {
   }
 
   return (
-    <div className="flex lg:m-12 m-6 flex-col lg:flex-row lg:items-start items-center">
+    <div className="flex lg:m-12 m-6 flex-col lg:flex-row lg:items-start items-center font-roboto">
       <img
         src={`${imagePath}${movies[count].poster_path}`}
         alt="poster"
@@ -40,11 +40,11 @@ export function Movies({ count }: MovieProps) {
       <div className="flex flex-col items-center text-center lg:ml-3">
         <h1
           key={movies[count].id}
-          className="text-white text-3xl mb-3 mt-3 font-semibold"
+          className="text-white text-3xl mb-3 mt-3 font-medium"
         >
-          {movies[count].original_title}
+          {movies[count].title}
         </h1>
-        <p className="text-white w-96">{movies[count].overview}</p>
+        <p className="text-white w-96 font-normal" >{movies[count].overview}</p>
       </div>
     </div>
   );

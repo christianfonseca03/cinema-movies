@@ -7,7 +7,7 @@ import { Movies } from "./components/Movie";
 export function App() {
   const [count, setCount] = useState(-1);
   return (
-    <div className="w-screen h-screen bg-gradient-to-r from-blue-900 via-black to-red-800 flex flex-col items-center">
+    <div className="w-screen h-screen bg-gradient-to-r from-blue-900 via-black to-red-800 flex flex-col items-center font-roboto">
       <Header />
       <Movies count={count} />
       <button
@@ -23,13 +23,12 @@ export function App() {
       >
         <img src={iconBtn} alt="iconBtn" className="h-7 w-7 mr-2" />
         <a href="#" className="font-bold">
-          Encontrar filme
+          Find movie
         </a>
       </button>
 
-      <p className="text-white text-sm mt-6">
-        Clique em "Encontrar filme" que traremos informações de algum filme para
-        você assistir hoje.
+      <p className="text-white text-sm mt-6 font-light">
+        Click in "Find movie" to have information about some movie you would like to watch!
       </p>
     </div>
   );
