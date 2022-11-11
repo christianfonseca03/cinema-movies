@@ -7,7 +7,7 @@ import { Movies } from "./components/Movie";
 export function App() {
   const [count, setCount] = useState(-1);
   return (
-    <div className="w-screen h-screen bg-gradient-to-r from-blue-900 via-black to-red-800 flex flex-col items-center font-roboto">
+    <div className="w-screen h-screen bg-gradient-to-r from-blue-900 via-black to-red-800 flex flex-col items-center font-roboto lg:justify-start ">
       <Header />
       <Movies count={count} />
       <button
@@ -27,8 +27,9 @@ export function App() {
         </a>
       </button>
 
-      <p className="text-white text-sm mt-6 font-light">
-        Click in "Find movie" to have information about some movie you would like to watch!
+      <p className="text-white text-sm mt-6 font-light text-center">
+        Click in "Find movie" to have information about some movie you would
+        like to watch!
       </p>
     </div>
   );
