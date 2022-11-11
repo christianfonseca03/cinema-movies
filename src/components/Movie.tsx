@@ -44,7 +44,7 @@ export function Movies({ count }: MovieProps) {
         >
           {movies[count].title}
         </h1>
-        <p className="text-white w-96 font-normal min-w-fit max-w-max" >{movies[count].overview}</p>
+        <p className="text-white lg:w-96 font-normal lg:max-w-none lg:h-auto lg:max-h-none max-h-fit " >{movies[count].overview}</p>
       </div>
     </div>
   );
