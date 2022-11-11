@@ -27,7 +27,7 @@ export function App() {
         </a>
       </button>
 
-      <p className="text-white text-sm mt-6 font-light text-center">
+      <p className="text-white text-sm mt-6 font-light text-center lg:px-0 px-8">
         Click in "Find movie" to have information about some movie you would
         like to watch!
       </p>
