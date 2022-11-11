@@ -37,14 +37,14 @@ export function Movies({ count }: MovieProps) {
         alt="poster"
         className="lg:h-80 lg:w-auto h-40 w-40"
       />
-      <div className="flex flex-col items-center text-center lg:ml-3">
+      <div className="flex flex-col items-center text-center justify-center lg:ml-3">
         <h1
           key={movies[count].id}
           className="text-white text-3xl mb-3 mt-3 font-medium"
         >
           {movies[count].title}
         </h1>
-        <p className="text-white w-96 font-normal" >{movies[count].overview}</p>
+        <p className="text-white w-96 font-normal min-w-fit max-w-max" >{movies[count].overview}</p>
       </div>
     </div>
   );
